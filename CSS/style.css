@@ -12,7 +12,7 @@ body { /* Цвет и шрифт сайта */
 }
 .header{ /* Установка картинки */
     min-height: 100vh;
-    background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url(../img/bg.jpg) no-repeat center top / cover;
+    background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url(../IMG/bg.jpg) no-repeat center top / cover;
 }
 .navbar{ /* Выравнивание содержимого шапки относительно друг друга */
     display: flex;
@@ -116,7 +116,7 @@ body { /* Цвет и шрифт сайта */
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     text-align: center;
     width: 90px;
     height: 90px;
@@ -144,7 +144,7 @@ body { /* Цвет и шрифт сайта */
 }
 .select { /* Выбор адреса, времени */
     border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     background: rgba(15, 0, 0, 0.452);
     color: #fff;
     padding: 18px;
@@ -154,4 +154,70 @@ body { /* Цвет и шрифт сайта */
 }
 .select-cinema { /* Ширина внутри выбора */
     min-width: 470px;
+}
+.scheme { /* Блок мест */
+    margin-bottom: 40px;
+    background: rgba(36, 36, 36, 0.18);
+    border-radius: 10px;
+}
+.scheme path:not(.light) { /* Не использовать для экрана */
+    fill: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.scheme path:not(.light):hover { /* Сидение при наведении */
+    fill: rgba(255, 255, 255, 0.5);
+}
+.scheme path.booked, 
+.scheme path.booked:hover { /* Занятые места */
+    fill: rgba(255, 255, 255, 0.05);
+    cursor: not-allowed;
+}
+.scheme path.active,
+.scheme path.active:hover { /* Выбранные места */
+    fill: #FE8E05
+}
+.legend { /* Блок с занято, свободно, выбрано */
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.50);
+    max-width: 1024px;
+    margin: auto;
+    padding-top: 22px;
+    padding-bottom: 38px;
+}
+.legend-label { /* Оформление элементов блока легенды */
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.legend svg { /* Отступ svg  от текста */
+    margin-right: 15px;
+}
+.price { /* Блок с ценой */
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price-label { /* Текст цены */
+    display: block;
+    font-size: 18px;
+    line-height: normal;
+}
+.price-tag { /* Стоимость */
+    font-size: 52px;
+    line-height: normal;
+}
+.button { /* Кнопка "перейти к оплате" */
+    display: block;
+    border-radius: 5px;
+    background: #FE8E05;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 24px 52px;
+    text-decoration: none;
 }
